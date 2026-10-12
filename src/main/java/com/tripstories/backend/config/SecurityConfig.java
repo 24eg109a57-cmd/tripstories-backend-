@@ -51,7 +51,14 @@ public class SecurityConfig {
                                 "/api/stories/**",
                                 "/api/comments/**"
                         ).permitAll()
-                        .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers(request ->
+                                HttpMethod.POST.matches(request.getMethod())
+                                        && ("/api/auth/signup".equals(
+                                                request.getServletPath()
+                                        ) || "/api/auth/login".equals(
+                                                request.getServletPath()
+                                        ))
+                        ).permitAll()
                         .anyRequest().authenticated()
                 )
                 .oauth2ResourceServer(resourceServer ->
