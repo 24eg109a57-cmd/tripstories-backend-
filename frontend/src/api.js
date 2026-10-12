@@ -1,5 +1,5 @@
 const configuredApiUrl = import.meta.env?.VITE_API_URL?.trim();
-const defaultApiUrl = "https://tripstories-backend.onrender.com";
+const defaultApiUrl = "https://tripstories-backend-sqjl.onrender.com";
 const ACCESS_TOKEN_KEY = "tripStoriesAccessToken";
 const SESSION_USER_KEY = "tripStoriesSessionUser";
 

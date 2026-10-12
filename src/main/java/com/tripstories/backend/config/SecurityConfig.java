@@ -51,11 +51,7 @@ public class SecurityConfig {
                                 "/api/stories/**",
                                 "/api/comments/**"
                         ).permitAll()
-                        .requestMatchers(
-                                HttpMethod.POST,
-                                "/api/auth/signup",
-                                "/api/auth/login"
-                        ).permitAll()
+                        .requestMatchers("/api/auth/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .oauth2ResourceServer(resourceServer ->
