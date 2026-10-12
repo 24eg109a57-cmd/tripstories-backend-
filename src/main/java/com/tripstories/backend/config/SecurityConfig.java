@@ -51,10 +51,13 @@ public class SecurityConfig {
                                 "/api/stories/**",
                                 "/api/comments/**"
                         ).permitAll()
-                        .requestMatchers(
-                                HttpMethod.POST,
-                                "/api/auth/signup",
-                                "/api/auth/login"
+                        .requestMatchers(request ->
+                                HttpMethod.POST.matches(request.getMethod())
+                                        && (request.getRequestURI().endsWith(
+                                                "/api/auth/signup"
+                                        ) || request.getRequestURI().endsWith(
+                                                "/api/auth/login"
+                                        ))
                         ).permitAll()
                         .anyRequest().authenticated()
                 )
