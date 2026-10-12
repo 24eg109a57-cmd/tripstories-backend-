@@ -23,6 +23,7 @@ import org.springframework.security.oauth2.jwt.JwtValidators;
 import org.springframework.security.oauth2.jwt.NimbusJwtDecoder;
 import org.springframework.security.oauth2.jwt.NimbusJwtEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
@@ -52,8 +53,14 @@ public class SecurityConfig {
                                 "/api/comments/**"
                         ).permitAll()
                         .requestMatchers(
-                                "/api/auth/signup",
-                                "/api/auth/login"
+                                AntPathRequestMatcher.antMatcher(
+                                        HttpMethod.POST,
+                                        "/api/auth/signup"
+                                ),
+                                AntPathRequestMatcher.antMatcher(
+                                        HttpMethod.POST,
+                                        "/api/auth/login"
+                                )
                         ).permitAll()
                         .anyRequest().authenticated()
                 )
