@@ -1,0 +1,1270 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.share-story-page {
+  min-height: 100vh;
+  background: #f6f3ed;
+  color: #202721;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =========================================================
+   NAVBAR
+   IMPORTANT:
+   This navbar is visible at the TOP of the page.
+========================================================= */
+
+.share-story-navbar {
+  width: 100%;
+  height: 76px;
+
+  padding: 0 45px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  background: #f6f3ed;
+
+  border-bottom: 1px solid #dfdcd5;
+
+  position: relative;
+  z-index: 100;
+
+  flex-shrink: 0;
+}
+
+/* LOGO */
+
+.share-story-logo {
+  display: flex;
+  align-items: center;
+
+  color: #28563e;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+}
+
+/* NAV */
+
+.share-story-navbar nav {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+}
+
+.share-story-navbar nav a {
+  position: relative;
+
+  color: #70776f;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.share-story-navbar nav a:hover {
+  color: #28563e;
+
+  transform: translateY(-1px);
+}
+
+.share-story-navbar nav a.active {
+  color: #28563e;
+
+  font-weight: 600;
+}
+
+.share-story-navbar nav a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: -10px;
+
+  height: 2px;
+
+  background: #e56e42;
+
+  border-radius: 2px;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.share-story-hero {
+  width: 100%;
+  max-width: 1180px;
+
+  min-height: 410px;
+
+  margin: 0 auto;
+
+  padding: 70px 25px 50px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+.share-story-hero-content {
+  max-width: 650px;
+}
+
+.share-story-hero-content > span {
+  color: #e56e42;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.share-story-hero h1 {
+  margin: 15px 0 18px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 65px;
+  line-height: 0.98;
+
+  font-weight: 400;
+
+  letter-spacing: -2px;
+}
+
+.share-story-hero h1 em {
+  color: #28563e;
+  font-style: italic;
+}
+
+.share-story-hero-content p {
+  max-width: 430px;
+
+  margin: 0;
+
+  color: #858b83;
+
+  font-size: 9px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   CIRCLE
+========================================================= */
+
+.share-story-circle {
+  width: 225px;
+  height: 225px;
+
+  flex-shrink: 0;
+
+  border: 1px solid #d7d4cc;
+
+  border-radius: 50%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  transform: rotate(8deg);
+
+  position: relative;
+}
+
+.share-story-circle::before {
+  content: "";
+
+  position: absolute;
+
+  width: 255px;
+  height: 255px;
+
+  border: 1px dashed #dedbd3;
+
+  border-radius: 50%;
+}
+
+.share-story-circle span {
+  color: #92978f;
+
+  font-size: 7px;
+
+  letter-spacing: 2px;
+}
+
+/* =========================================================
+   FORM SECTION
+========================================================= */
+
+.share-story-form-section {
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  padding: 70px 25px;
+
+  border-top: 1px solid #dfdcd5;
+
+  display: grid;
+
+  grid-template-columns: 0.8fr 1.2fr;
+
+  gap: 80px;
+
+  box-sizing: border-box;
+}
+
+.share-story-intro > span {
+  color: #e56e42;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 1.7px;
+}
+
+.share-story-intro h2 {
+  margin: 12px 0 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 42px;
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.share-story-intro h2 em {
+  color: #28563e;
+
+  font-style: italic;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.share-story-form {
+  width: 100%;
+}
+
+.share-form-group {
+  margin-bottom: 28px;
+}
+
+.share-form-group label:not(.story-image-upload) {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #737a72;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+}
+
+/* INPUTS */
+
+.share-form-group input[type="text"],
+.share-form-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 14px 15px;
+
+  border: 1px solid #d8d5cd;
+
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #fbf9f4;
+
+  color: #303831;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+
+  transition: 0.2s ease;
+}
+
+.share-form-group input[type="text"] {
+  height: 48px;
+}
+
+.share-form-group textarea {
+  min-height: 180px;
+
+  resize: vertical;
+
+  line-height: 1.8;
+}
+
+.share-form-group input[type="text"]:focus,
+.share-form-group textarea:focus {
+  border-color: #28563e;
+
+  background: #fffdf9;
+}
+
+.share-form-group input::placeholder,
+.share-form-group textarea::placeholder {
+  color: #aaa;
+}
+
+.share-form-group small {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #a1a59f;
+
+  font-size: 6px;
+}
+
+/* =========================================================
+   STORY PHOTOS LABEL
+========================================================= */
+
+.story-photos-label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #737a72;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+}
+
+/* =========================================================
+   PHOTO UPLOAD BOX
+
+   Simple mature layout:
+
+   ┌─────────────────────────────┐
+   │                             │
+   │              +              │
+   │          Add photos         │
+   │           0/6 photos        │
+   │                             │
+   └─────────────────────────────┘
+========================================================= */
+
+.story-image-upload {
+  width: 100%;
+
+  min-height: 170px;
+
+  border: 1px dashed #cfcac0;
+
+  border-radius: 9px;
+
+  background: #fbf9f4;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.story-image-upload:hover {
+  border-color: #28563e;
+
+  background: #f8f5ee;
+}
+
+/* HIDE REAL INPUT */
+
+.story-image-upload input[type="file"] {
+  display: none;
+}
+
+/* EMPTY STATE */
+
+.upload-empty {
+  width: 100%;
+
+  min-height: 170px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.upload-plus {
+  width: 42px;
+  height: 42px;
+
+  margin-bottom: 10px;
+
+  border-radius: 50%;
+
+  background: #e9e5dc;
+
+  color: #28563e;
+
+  display: grid;
+
+  place-items: center;
+
+  font-size: 22px;
+
+  font-weight: 400;
+}
+
+.upload-empty strong {
+  color: #535c53;
+
+  font-size: 9px;
+
+  font-weight: 600;
+}
+
+.upload-empty span {
+  margin-top: 5px;
+
+  color: #a0a49e;
+
+  font-size: 7px;
+}
+
+/* =========================================================
+   SELECTED PHOTOS
+========================================================= */
+
+.story-image-upload.has-photos {
+  padding: 14px;
+
+  border-style: solid;
+
+  border-color: #d7d3ca;
+
+  cursor: default;
+
+  display: block;
+}
+
+.upload-selected {
+  width: 100%;
+}
+
+/* GRID */
+
+.photo-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+/* PHOTO */
+
+.photo-preview {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+
+  border-radius: 7px;
+
+  background: #ebe7df;
+}
+
+.photo-preview img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* REMOVE */
+
+.remove-photo {
+  position: absolute;
+
+  top: 6px;
+  right: 6px;
+
+  width: 25px;
+  height: 25px;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: rgba(32, 39, 33, 0.78);
+
+  color: white;
+
+  font-size: 16px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  display: grid;
+
+  place-items: center;
+
+  transition: 0.2s ease;
+}
+
+.remove-photo:hover {
+  background: #a65043;
+}
+
+/* COUNT */
+
+.photo-count {
+  margin-top: 12px;
+
+  color: #737a72;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  text-align: right;
+}
+
+/* HELPER */
+
+.photo-helper {
+  margin: 7px 0 0;
+
+  color: #a1a59f;
+
+  font-size: 7px;
+}
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.share-message {
+  margin-bottom: 18px;
+
+  padding: 11px 13px;
+
+  border-radius: 6px;
+
+  font-size: 8px;
+}
+
+.share-message.success {
+  background: #e7efe7;
+
+  color: #28563e;
+}
+
+.share-message.error {
+  background: #f5e4df;
+
+  color: #a65043;
+}
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.share-submit-button {
+  width: 100%;
+
+  height: 50px;
+
+  padding: 0 18px;
+
+  border: 0;
+
+  border-radius: 28px;
+
+  background: #28563e;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 8px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.share-submit-button:hover {
+  background: #1f4632;
+
+  transform: translateY(-1px);
+}
+
+.share-submit-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+.share-submit-button span:last-child {
+  font-size: 15px;
+}
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.share-story-quote {
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  padding: 70px 25px;
+
+  border-top: 1px solid #dfdcd5;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+.share-quote-line {
+  width: 35px;
+
+  height: 1px;
+
+  margin: 0 auto 17px;
+
+  background: #e56e42;
+}
+
+.share-story-quote > span {
+  color: #8f958e;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.share-story-quote blockquote {
+  margin: 18px 0 0;
+
+  font-family: "Playfair Display", serif;
+
+  color: #354139;
+
+  font-size: 32px;
+
+  font-style: italic;
+
+  font-weight: 400;
+
+  line-height: 1.3;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.share-story-footer {
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  padding: 25px;
+
+  border-top: 1px solid #dfdcd5;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  box-sizing: border-box;
+}
+
+.share-story-footer strong {
+  color: #28563e;
+
+  font-size: 8px;
+
+  letter-spacing: 1.5px;
+}
+
+.share-story-footer p {
+  margin: 4px 0 0;
+
+  color: #969b94;
+
+  font-size: 7px;
+}
+
+.share-footer-links {
+  margin-left: auto;
+
+  display: flex;
+
+  gap: 18px;
+}
+
+.share-footer-links a {
+  color: #858b83;
+
+  font-size: 7px;
+
+  text-decoration: none;
+}
+
+.share-footer-links a:hover {
+  color: #28563e;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .share-story-navbar {
+    padding: 0 25px;
+  }
+
+  .share-story-navbar nav {
+    gap: 18px;
+  }
+
+  .share-story-navbar nav a {
+    font-size: 9px;
+  }
+
+  .share-story-hero {
+    min-height: 370px;
+  }
+
+  .share-story-hero h1 {
+    font-size: 53px;
+  }
+
+  .share-story-circle {
+    width: 175px;
+    height: 175px;
+  }
+
+  .share-story-circle::before {
+    width: 200px;
+    height: 200px;
+  }
+
+  .share-story-form-section {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  /* NAVBAR */
+
+  .share-story-navbar {
+    height: auto;
+
+    min-height: 70px;
+
+    padding: 16px 18px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 14px;
+  }
+
+  .share-story-logo {
+    font-size: 13px;
+  }
+
+  .share-story-navbar nav {
+    width: 100%;
+
+    margin-left: 0;
+
+    display: flex;
+
+    gap: 18px;
+
+    overflow-x: auto;
+
+    padding-bottom: 4px;
+  }
+
+  .share-story-navbar nav a {
+    font-size: 9px;
+
+    flex-shrink: 0;
+  }
+
+  .share-story-navbar nav a.active::after {
+    bottom: -6px;
+  }
+
+  /* HERO */
+
+  .share-story-hero {
+    min-height: auto;
+
+    padding: 55px 18px 45px;
+
+    display: block;
+  }
+
+  .share-story-hero h1 {
+    font-size: 46px;
+  }
+
+  .share-story-circle {
+    width: 135px;
+
+    height: 135px;
+
+    margin: 40px 15px 0 auto;
+  }
+
+  .share-story-circle::before {
+    width: 155px;
+
+    height: 155px;
+  }
+
+  /* FORM */
+
+  .share-story-form-section {
+    padding: 55px 18px;
+
+    gap: 35px;
+  }
+
+  .share-story-intro h2 {
+    font-size: 35px;
+  }
+
+  /* PHOTOS */
+
+  .photo-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  /* QUOTE */
+
+  .share-story-quote {
+    padding: 55px 18px;
+  }
+
+  .share-story-quote blockquote {
+    font-size: 26px;
+  }
+
+  /* FOOTER */
+
+  .share-story-footer {
+    padding: 22px 18px;
+
+    flex-wrap: wrap;
+  }
+
+  .share-footer-links {
+    width: 100%;
+
+    margin-left: 0;
+
+    flex-wrap: wrap;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .share-story-navbar nav {
+    gap: 13px;
+  }
+
+  .share-story-navbar nav a {
+    font-size: 8px;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* =========================================================
+   STORY PHOTO UPLOAD
+========================================================= */
+
+.story-image-upload {
+  width: 100%;
+
+  min-height: 180px;
+
+  border: 1px dashed #cfcac0;
+
+  border-radius: 9px;
+
+  background: #fbf9f4;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition: 0.2s ease;
+}
+
+
+.story-image-upload:hover {
+  border-color: #28563e;
+
+  background: #f8f5ee;
+}
+
+
+.story-image-upload input {
+  display: none;
+}
+
+
+/* =========================================================
+   EMPTY UPLOAD
+========================================================= */
+
+.upload-placeholder {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+.upload-plus {
+  width: 42px;
+
+  height: 42px;
+
+  margin-bottom: 10px;
+
+  border-radius: 50%;
+
+  background: #e9e5dc;
+
+  color: #28563e;
+
+  display: grid;
+
+  place-items: center;
+
+  font-size: 23px;
+
+  font-weight: 300;
+}
+
+
+.upload-placeholder strong {
+  color: #535c53;
+
+  font-size: 9px;
+
+  font-weight: 600;
+}
+
+
+.upload-placeholder p {
+  margin: 5px 0 0;
+
+  color: #a0a49e;
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   PHOTO GRID
+========================================================= */
+
+.story-image-upload.has-image {
+  min-height: 180px;
+
+  padding: 12px;
+
+  border-style: solid;
+
+  border-color: #d7d3ca;
+
+  align-items: flex-start;
+
+  justify-content: flex-start;
+}
+
+
+.story-photo-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 10px;
+}
+
+
+.story-photo-item {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+
+  border-radius: 7px;
+
+  background: #e9e5dc;
+}
+
+
+.story-photo-item img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+.story-photo-remove {
+  position: absolute;
+
+  top: 5px;
+
+  right: 5px;
+
+  width: 23px;
+
+  height: 23px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(32, 39, 33, 0.75);
+
+  color: white;
+
+  font-size: 15px;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   ADD MORE
+========================================================= */
+
+.story-photo-add-more {
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  border: 1px dashed #cfcac0;
+
+  border-radius: 7px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #28563e;
+
+  background: #f8f5ee;
+}
+
+
+.story-photo-add-more span {
+  font-size: 25px;
+
+  line-height: 1;
+}
+
+
+.story-photo-add-more small {
+  margin-top: 5px;
+
+  color: #92978f;
+
+  font-size: 7px;
+}
+
+
+/* =========================================================
+   MOBILE PHOTO GRID
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .story-photo-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+/* =========================================================
+   ADD MORE PHOTO BUTTON
+========================================================= */
+
+.story-photo-add-more {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  border: 1px dashed #cfcac0;
+  border-radius: 7px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #28563e;
+  background: #f8f5ee;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition: 0.2s ease;
+}
+
+.story-photo-add-more:hover {
+  border-color: #28563e;
+  background: #eeeae1;
+}
+
+.story-photo-add-more input[type="file"] {
+  display: none;
+}
+
+.story-photo-add-more span {
+  font-size: 25px;
+  line-height: 1;
+}
+
+.story-photo-add-more small {
+  margin-top: 5px;
+
+  color: #92978f;
+
+  font-size: 7px;
+}

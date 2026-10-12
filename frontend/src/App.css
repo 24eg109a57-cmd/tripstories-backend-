@@ -1,0 +1,347 @@
+/* =========================================================
+   TRIPSTORIES GLOBAL
+   ========================================================= */
+
+main {
+  min-height: calc(100vh - 72px);
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.ts-navbar {
+  height: 72px;
+  background: rgba(247, 244, 238, 0.94);
+  border-bottom: 1px solid rgba(35, 48, 40, 0.08);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  backdrop-filter: blur(16px);
+}
+
+.ts-navbar-inner {
+  max-width: 1240px;
+  height: 100%;
+
+  margin: auto;
+  padding: 0 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.ts-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  min-width: 190px;
+}
+
+.ts-logo-mark {
+  width: 28px;
+  height: 28px;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: var(--green);
+  color: #f4bd79;
+
+  font-size: 13px;
+}
+
+.ts-logo-text {
+  font-family: "Playfair Display", serif;
+  font-size: 21px;
+  letter-spacing: -0.5px;
+}
+
+.ts-logo-text span {
+  font-style: italic;
+}
+
+
+/* NAV LINKS */
+
+.ts-nav {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+}
+
+.ts-nav-link {
+  position: relative;
+
+  font-size: 11px;
+  color: #656b65;
+
+  padding: 28px 0;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ts-nav-link:hover {
+  color: var(--green);
+}
+
+.ts-nav-link.active {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.ts-nav-link.active::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: var(--orange);
+}
+
+
+/* RIGHT SIDE */
+
+.ts-navbar-right {
+  min-width: 190px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.ts-share-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: var(--green);
+  color: white;
+
+  border-radius: 30px;
+
+  padding: 10px 15px;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.ts-share-button:hover {
+  transform: translateY(-1px);
+  background: var(--green-dark);
+}
+
+.ts-share-button span {
+  font-size: 12px;
+}
+
+
+.ts-navbar-avatar {
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: #dfe9df;
+
+  color: var(--green);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  border: 1px solid #cbd9cb;
+}
+
+
+.ts-menu-button {
+  display: none;
+
+  border: 0;
+  background: transparent;
+
+  font-size: 22px;
+  color: var(--green);
+}
+
+
+/* =========================================================
+   SHARED PAGE
+   ========================================================= */
+
+.ts-page {
+  width: 100%;
+  min-height: calc(100vh - 72px);
+}
+
+.ts-eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #687269;
+}
+
+.ts-eyebrow.orange {
+  color: var(--orange);
+}
+
+.ts-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 30px;
+
+  padding: 12px 19px;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  border: 1px solid transparent;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.ts-btn:hover {
+  transform: translateY(-2px);
+}
+
+.ts-btn-dark {
+  background: var(--green);
+  color: white;
+}
+
+.ts-btn-dark:hover {
+  background: var(--green-dark);
+}
+
+.ts-btn-light {
+  background: white;
+  color: var(--green);
+  border-color: #dce2dc;
+}
+
+
+/* =========================================================
+   RESPONSIVE NAVBAR
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .ts-navbar-inner {
+    padding: 0 18px;
+  }
+
+  .ts-logo {
+    min-width: auto;
+  }
+
+  .ts-navbar-right {
+    min-width: auto;
+  }
+
+  .ts-share-button {
+    display: none;
+  }
+
+  .ts-menu-button {
+    display: block;
+  }
+
+  .ts-nav {
+    position: absolute;
+
+    left: 15px;
+    right: 15px;
+    top: 66px;
+
+    padding: 12px;
+
+    background: #fff;
+
+    border: 1px solid #e3e0d8;
+
+    border-radius: 15px;
+
+    box-shadow: 0 18px 45px rgba(30, 40, 32, 0.12);
+
+    display: none;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 2px;
+  }
+
+  .ts-nav.open {
+    display: flex;
+  }
+
+  .ts-nav-link {
+    padding: 13px;
+
+    border-radius: 8px;
+  }
+
+  .ts-nav-link:hover {
+    background: var(--green-light);
+  }
+
+  .ts-nav-link.active {
+    background: var(--green-light);
+  }
+
+  .ts-nav-link.active::after {
+    display: none;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .ts-logo-text {
+    font-size: 18px;
+  }
+
+  .ts-logo-mark {
+    width: 25px;
+    height: 25px;
+  }
+
+  .ts-navbar-avatar {
+    width: 29px;
+    height: 29px;
+  }
+}

@@ -1,0 +1,303 @@
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  width: 100%;
+
+  min-height: 72px;
+
+  padding: 0 45px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background: #f6f3ed;
+
+  border-bottom: 1px solid #ddd8cf;
+
+  position: relative;
+
+  z-index: 1000;
+
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.navbar-logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #28563e;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+}
+
+
+.navbar-star {
+  font-size: 18px;
+
+  line-height: 1;
+
+  color: #e56e42;
+}
+
+
+.navbar-logo-text {
+  font-family: "Playfair Display", serif;
+
+  font-size: 20px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.2px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navbar-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+}
+
+
+.navbar-link {
+  position: relative;
+
+  color: #737a72;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  padding: 8px 0;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.navbar-link:hover {
+  color: #28563e;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ACTIVE LINK
+========================================================= */
+
+.navbar-link.active {
+  color: #28563e;
+
+  font-weight: 600;
+}
+
+
+.navbar-link.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  height: 2px;
+
+  border-radius: 2px;
+
+  background: #e56e42;
+}
+
+
+/* =========================================================
+   LOGIN / LOGOUT
+========================================================= */
+
+.navbar-login-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 78px;
+
+  height: 36px;
+
+  padding: 0 18px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #28563e;
+
+  border-radius: 22px;
+
+  background: #28563e;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.navbar-login-button:hover {
+  background: #1f4632;
+
+  transform: translateY(-1px);
+}
+
+
+.navbar-login-button.active {
+  background: #1f4632;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .navbar {
+    padding: 0 25px;
+  }
+
+  .navbar-links {
+    gap: 18px;
+  }
+
+  .navbar-link {
+    font-size: 11px;
+  }
+
+  .navbar-logo-text {
+    font-size: 18px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .navbar {
+    min-height: auto;
+
+    padding: 18px;
+
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+
+  .navbar-logo {
+    align-self: flex-start;
+  }
+
+
+  .navbar-links {
+    width: 100%;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px 18px;
+  }
+
+
+  .navbar-link {
+    font-size: 10px;
+  }
+
+
+  .navbar-login-button {
+    min-width: 70px;
+
+    height: 32px;
+
+    padding: 0 14px;
+
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .navbar {
+    padding: 15px;
+  }
+
+
+  .navbar-logo-text {
+    font-size: 17px;
+  }
+
+
+  .navbar-star {
+    font-size: 16px;
+  }
+
+
+  .navbar-links {
+    gap: 10px 14px;
+  }
+
+
+  .navbar-link {
+    font-size: 9px;
+  }
+
+}

@@ -1,0 +1,1972 @@
+/* =========================================================
+   TRIPSTORIES - EXPLORE PAGE
+========================================================= */
+
+.explore-page {
+  min-height: 100vh;
+  background: #f7f5f0;
+  color: #1d2523;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.explore-hero {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  padding: 90px 0 80px;
+
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.explore-hero-content {
+  max-width: 540px;
+}
+
+.explore-eyebrow {
+  display: inline-block;
+  margin-bottom: 22px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+
+  color: #28605b;
+}
+
+.explore-hero h1 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(54px, 6vw, 82px);
+  line-height: 0.96;
+  font-weight: 400;
+  letter-spacing: -3px;
+
+  color: #182321;
+}
+
+.explore-hero h1 em {
+  color: #e8795c;
+  font-style: italic;
+}
+
+.explore-hero-content > p {
+  max-width: 480px;
+  margin: 28px 0 34px;
+
+  font-size: 16px;
+  line-height: 1.8;
+
+  color: #6d7471;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.explore-search {
+  width: min(470px, 100%);
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 18px;
+
+  background: #ffffff;
+  border: 1px solid #e4e0d8;
+  border-radius: 4px;
+
+  box-shadow: 0 12px 35px rgba(38, 45, 42, 0.07);
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.explore-search:focus-within {
+  border-color: #e8795c;
+
+  box-shadow:
+    0 12px 35px rgba(232, 121, 92, 0.12);
+}
+
+.explore-search > span {
+  margin-right: 12px;
+
+  font-size: 24px;
+  color: #8b918e;
+}
+
+.explore-search input {
+  flex: 1;
+  min-width: 0;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  color: #202826;
+}
+
+.explore-search input::placeholder {
+  color: #a2a6a3;
+}
+
+.explore-search button {
+  width: 28px;
+  height: 28px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: #f0eee9;
+  color: #606764;
+
+  cursor: pointer;
+
+  font-size: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.explore-search button:hover {
+  background: #e7e3dc;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.explore-hero-image {
+  height: 560px;
+
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 25px 60px rgba(30, 38, 35, 0.12);
+}
+
+.explore-hero-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.02),
+      rgba(0, 0, 0, 0.2)
+    );
+
+  pointer-events: none;
+}
+
+.explore-hero-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+.explore-hero-image:hover img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================================
+   DESTINATIONS
+========================================================= */
+
+.destinations-section {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+
+  padding: 80px 0 110px;
+}
+
+.destinations-heading {
+  display: grid;
+
+  grid-template-columns: 1fr 0.65fr;
+
+  gap: 80px;
+
+  align-items: end;
+
+  margin-bottom: 55px;
+}
+
+.destinations-heading > div > span {
+  display: block;
+
+  margin-bottom: 18px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+
+  color: #28605b;
+}
+
+.destinations-heading h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(40px, 5vw, 62px);
+  line-height: 1;
+
+  font-weight: 400;
+
+  letter-spacing: -2px;
+}
+
+.destinations-heading h2 em {
+  color: #e8795c;
+  font-style: italic;
+}
+
+.destinations-heading > p {
+  margin: 0;
+
+  max-width: 390px;
+
+  font-size: 15px;
+  line-height: 1.8;
+
+  color: #747a77;
+}
+
+
+/* =========================================================
+   DESTINATION GRID
+========================================================= */
+
+.destinations-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+.destination-card {
+  background: #ffffff;
+
+  border: 1px solid #e7e3dc;
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-7px);
+
+  border-color: #ddd7cd;
+
+  box-shadow:
+    0 20px 45px rgba(34, 41, 38, 0.1);
+}
+
+
+/* =========================================================
+   DESTINATION IMAGE
+========================================================= */
+
+.destination-image {
+  height: 270px;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.destination-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.destination-card:hover .destination-image img {
+  transform: scale(1.07);
+}
+
+
+/* =========================================================
+   DESTINATION CONTENT
+========================================================= */
+
+.destination-content {
+  padding: 27px 27px 30px;
+}
+
+.destination-country {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  color: #e8795c;
+}
+
+.destination-content h3 {
+  margin: 0 0 12px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 31px;
+  font-weight: 400;
+
+  color: #202825;
+}
+
+.destination-content p {
+  min-height: 65px;
+
+  margin: 0 0 23px;
+
+  font-size: 13px;
+  line-height: 1.7;
+
+  color: #747a77;
+}
+
+
+/* =========================================================
+   DESTINATION BUTTON
+========================================================= */
+
+.destination-button {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #28605b;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    gap 0.25s ease,
+    color 0.25s ease;
+}
+
+.destination-button span {
+  font-size: 18px;
+
+  transition: transform 0.25s ease;
+}
+
+.destination-button:hover {
+  gap: 16px;
+  color: #e8795c;
+}
+
+.destination-button:hover span {
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   EMPTY SEARCH
+========================================================= */
+
+.explore-empty {
+  padding: 90px 20px;
+
+  text-align: center;
+
+  border: 1px dashed #d8d3ca;
+
+  background: #faf9f6;
+}
+
+.explore-empty > span {
+  display: block;
+
+  margin-bottom: 15px;
+
+  font-size: 25px;
+
+  color: #e8795c;
+}
+
+.explore-empty h3 {
+  margin: 0 0 10px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.explore-empty p {
+  margin: 0 0 22px;
+
+  color: #777d79;
+}
+
+.explore-empty button {
+  padding: 12px 20px;
+
+  border: 1px solid #d8d3ca;
+
+  background: #ffffff;
+
+  color: #28605b;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.explore-empty button:hover {
+  background: #f3f0ea;
+  border-color: #28605b;
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.explore-quote {
+  padding: 115px 20px;
+
+  text-align: center;
+
+  background: #e9efeb;
+
+  border-top: 1px solid #dce5df;
+  border-bottom: 1px solid #dce5df;
+}
+
+.explore-quote > span {
+  display: block;
+
+  margin-bottom: 25px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+
+  color: #28605b;
+}
+
+.explore-quote blockquote {
+  max-width: 800px;
+
+  margin: 0 auto;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(32px, 5vw, 55px);
+
+  line-height: 1.12;
+
+  font-style: italic;
+
+  font-weight: 400;
+
+  letter-spacing: -1.5px;
+
+  color: #24312e;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.explore-cta {
+  width: min(1180px, 92%);
+
+  margin: 0 auto;
+
+  padding: 110px 0 130px;
+
+  display: flex;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.explore-cta span {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+
+  color: #28605b;
+}
+
+.explore-cta h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(42px, 5vw, 65px);
+
+  line-height: 1.05;
+
+  font-weight: 400;
+
+  letter-spacing: -2px;
+}
+
+.explore-cta h2 em {
+  color: #e8795c;
+  font-style: italic;
+}
+
+
+/* =========================================================
+   =========================================================
+   DESTINATION DETAILS PAGE
+   =========================================================
+   ========================================================= */
+
+.destination-details-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(232, 121, 92, 0.07),
+      transparent 25%
+    ),
+    #f5f7f4;
+
+  color: #182321;
+
+  padding-bottom: 100px;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.destination-back-button {
+  position: fixed;
+
+  top: 25px;
+  left: 30px;
+
+  z-index: 100;
+
+  padding: 12px 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  border-radius: 30px;
+
+  background: rgba(24, 35, 33, 0.9);
+
+  color: #ffffff;
+
+  backdrop-filter: blur(10px);
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.destination-back-button:hover {
+  transform: translateX(-3px);
+
+  background: #e8795c;
+}
+
+
+/* =========================================================
+   DETAILS HEADER
+========================================================= */
+
+.destination-details-header {
+  width: min(1240px, 92%);
+
+  margin: 0 auto;
+
+  padding: 90px 0 70px;
+
+  display: grid;
+
+  grid-template-columns: 1.15fr 0.85fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   LARGE DESTINATION IMAGE
+========================================================= */
+
+.destination-details-header-image {
+  height: 620px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 35px 80px rgba(27, 38, 35, 0.18);
+}
+
+.destination-details-header-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 1s ease;
+}
+
+.destination-details-header-image:hover img {
+  transform: scale(1.03);
+}
+
+.destination-image-overlay {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 70px 45px 40px;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(0, 0, 0, 0.72)
+    );
+
+  color: #ffffff;
+}
+
+.destination-image-overlay span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  color: #ffd4c8;
+}
+
+.destination-image-overlay h1 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(50px, 6vw, 82px);
+
+  font-weight: 400;
+
+  letter-spacing: -3px;
+}
+
+
+/* =========================================================
+   INTRO CONTENT
+========================================================= */
+
+.destination-details-intro {
+  max-width: 500px;
+}
+
+.destination-details-label {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  padding: 8px 13px;
+
+  border-radius: 30px;
+
+  background: #e9efeb;
+
+  color: #28605b;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.destination-details-intro h2 {
+  margin: 0 0 24px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(38px, 4.5vw, 62px);
+
+  line-height: 1.05;
+
+  font-weight: 400;
+
+  letter-spacing: -2px;
+
+  color: #182321;
+}
+
+.destination-details-intro h2 em {
+  color: #e8795c;
+
+  font-style: italic;
+}
+
+.destination-details-intro > p {
+  margin: 0 0 32px;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  color: #6e7773;
+}
+
+
+/* =========================================================
+   AUTHOR
+========================================================= */
+
+.destination-author-box {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 30px;
+}
+
+.destination-author-avatar {
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #28605b,
+      #1b4642
+    );
+
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 21px;
+
+  box-shadow:
+    0 8px 20px rgba(40, 96, 91, 0.2);
+}
+
+.destination-author-box div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.destination-author-box span {
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: #9a9f9d;
+}
+
+.destination-author-box strong {
+  font-size: 14px;
+
+  color: #202825;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.destination-actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.destination-action {
+  min-height: 45px;
+
+  padding: 0 18px;
+
+  border: 1px solid #d8ded9;
+
+  border-radius: 30px;
+
+  background: #ffffff;
+
+  color: #28605b;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.destination-action:hover {
+  transform: translateY(-2px);
+
+  background: #28605b;
+
+  color: #ffffff;
+
+  border-color: #28605b;
+}
+
+.destination-action.follow {
+  background: #28605b;
+
+  border-color: #28605b;
+
+  color: #ffffff;
+}
+
+.destination-action.follow:hover {
+  background: #e8795c;
+
+  border-color: #e8795c;
+}
+
+.destination-action.liked {
+  background: #e8795c;
+
+  border-color: #e8795c;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   JOURNEY UPDATES SECTION
+========================================================= */
+
+.journey-updates-section {
+  width: min(1000px, 92%);
+
+  margin: 0 auto;
+
+  padding: 40px 0 80px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.journey-section-heading {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: end;
+
+  gap: 50px;
+
+  margin-bottom: 55px;
+}
+
+.journey-section-heading > div {
+  max-width: 600px;
+}
+
+.journey-section-heading span {
+  display: block;
+
+  margin-bottom: 14px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  color: #28605b;
+}
+
+.journey-section-heading h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(38px, 5vw, 58px);
+
+  line-height: 1;
+
+  font-weight: 400;
+
+  letter-spacing: -2px;
+}
+
+.journey-section-heading h2 em {
+  color: #e8795c;
+
+  font-style: italic;
+}
+
+.journey-section-heading > p {
+  max-width: 300px;
+
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  color: #7a827e;
+}
+
+
+/* =========================================================
+   NO UPDATE
+========================================================= */
+
+.no-journey-update {
+  padding: 75px 40px;
+
+  text-align: center;
+
+  border: 1px solid #dce3de;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #f0f5f1
+    );
+
+  box-shadow:
+    0 20px 50px rgba(32, 47, 43, 0.07);
+}
+
+.no-update-icon {
+  width: 65px;
+  height: 65px;
+
+  margin: 0 auto 22px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e9efeb;
+
+  color: #e8795c;
+
+  font-size: 25px;
+}
+
+.no-journey-update > span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  color: #28605b;
+}
+
+.no-journey-update h3 {
+  margin: 0 0 14px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 30px;
+
+  font-weight: 400;
+
+  color: #202825;
+}
+
+.no-journey-update p {
+  max-width: 560px;
+
+  margin: 0 auto;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #7a827e;
+}
+
+
+/* =========================================================
+   JOURNEY TIMELINE
+========================================================= */
+
+.journey-timeline {
+  position: relative;
+}
+
+.journey-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 30px;
+
+  width: 1px;
+
+  background:
+    linear-gradient(
+      #d8ded9,
+      transparent
+    );
+}
+
+
+/* =========================================================
+   JOURNEY UPDATE CARD
+========================================================= */
+
+.journey-update-card {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 60px 1fr;
+
+  gap: 28px;
+
+  margin-bottom: 55px;
+}
+
+.journey-number {
+  position: relative;
+
+  z-index: 2;
+
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #28605b;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 10px 25px rgba(40, 96, 91, 0.2);
+}
+
+.journey-number span {
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   UPDATE CARD CONTENT
+========================================================= */
+
+.journey-update-content {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e7e3;
+
+  box-shadow:
+    0 18px 50px rgba(32, 47, 43, 0.08);
+}
+
+
+/* =========================================================
+   UPDATE TOP
+========================================================= */
+
+.journey-update-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 25px;
+
+  padding: 28px 30px 24px;
+}
+
+.journey-update-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: #e8795c;
+}
+
+.journey-update-top h3 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 29px;
+
+  font-weight: 400;
+
+  color: #202825;
+}
+
+.journey-update-date {
+  flex-shrink: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 5px;
+}
+
+.journey-update-date strong {
+  font-size: 11px;
+
+  color: #28605b;
+
+  white-space: nowrap;
+}
+
+.journey-update-date span {
+  font-size: 10px;
+
+  color: #909793;
+}
+
+
+/* =========================================================
+   UPDATE IMAGE
+========================================================= */
+
+.journey-update-image {
+  height: 440px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.journey-update-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.journey-update-card:hover .journey-update-image img {
+  transform: scale(1.025);
+}
+
+.journey-photo-tag {
+  position: absolute;
+
+  left: 20px;
+  bottom: 20px;
+
+  padding: 8px 12px;
+
+  border-radius: 20px;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  backdrop-filter: blur(8px);
+
+  color: #ffffff;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.journey-update-story {
+  padding: 28px 30px 32px;
+
+  border-bottom: 1px solid #edf0ed;
+}
+
+.journey-update-story > span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: #28605b;
+}
+
+.journey-update-story p {
+  margin: 0;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  color: #5e6864;
+}
+
+
+/* =========================================================
+   COMMENTS
+========================================================= */
+
+.journey-comments {
+  padding: 30px;
+}
+
+.comments-heading {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: end;
+
+  gap: 20px;
+
+  margin-bottom: 22px;
+}
+
+.comments-heading span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: #e8795c;
+}
+
+.comments-heading h4 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 23px;
+
+  font-weight: 400;
+
+  color: #202825;
+}
+
+.comments-heading > strong {
+  font-size: 10px;
+
+  color: #7d8581;
+}
+
+
+/* =========================================================
+   COMMENT INPUT
+========================================================= */
+
+.comment-input-area {
+  display: flex;
+
+  gap: 10px;
+
+  align-items: stretch;
+
+  margin-bottom: 28px;
+}
+
+.comment-input-area textarea {
+  flex: 1;
+
+  min-width: 0;
+
+  resize: vertical;
+
+  min-height: 75px;
+
+  padding: 15px;
+
+  border: 1px solid #dfe5e1;
+
+  border-radius: 12px;
+
+  outline: none;
+
+  background: #f8faf8;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  color: #202825;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.comment-input-area textarea:focus {
+  border-color: #28605b;
+
+  background: #ffffff;
+}
+
+.comment-input-area button {
+  align-self: flex-end;
+
+  min-height: 42px;
+
+  padding: 0 18px;
+
+  border: 0;
+
+  border-radius: 22px;
+
+  background: #28605b;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.comment-input-area button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  background: #e8795c;
+}
+
+.comment-input-area button:disabled {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   EMPTY COMMENTS
+========================================================= */
+
+.empty-comments {
+  padding: 30px;
+
+  text-align: center;
+
+  border-radius: 14px;
+
+  background: #f8faf8;
+
+  border: 1px dashed #d9e0db;
+}
+
+.empty-comments span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 20px;
+
+  color: #e8795c;
+}
+
+.empty-comments p {
+  margin: 0 0 4px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  color: #5f6965;
+}
+
+.empty-comments small {
+  font-size: 10px;
+
+  color: #929995;
+}
+
+
+/* =========================================================
+   COMMENTS LIST
+========================================================= */
+
+.comments-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.comment-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 15px;
+
+  border-radius: 14px;
+
+  background: #f8faf8;
+
+  border: 1px solid #e5eae6;
+}
+
+.comment-avatar {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #28605b;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+.comment-main {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.comment-meta {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-bottom: 7px;
+}
+
+.comment-meta strong {
+  font-size: 11px;
+
+  color: #202825;
+}
+
+.comment-meta span {
+  font-size: 9px;
+
+  color: #929995;
+}
+
+.comment-main p {
+  margin: 0 0 8px;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  color: #5f6965;
+}
+
+.delete-comment {
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #c06d5a;
+
+  font-family: inherit;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.delete-comment:hover {
+  color: #a33f29;
+
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .explore-hero {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    padding-top: 65px;
+  }
+
+  .explore-hero-content {
+    max-width: 700px;
+  }
+
+  .explore-hero-image {
+    height: 460px;
+  }
+
+  .destinations-heading {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .destinations-heading > p {
+    max-width: 600px;
+  }
+
+  .destinations-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  /* DETAILS */
+
+  .destination-details-header {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    padding-top: 100px;
+  }
+
+  .destination-details-header-image {
+    height: 520px;
+  }
+
+  .destination-details-intro {
+    max-width: 800px;
+  }
+
+  .journey-section-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .journey-section-heading > p {
+    max-width: 600px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .explore-hero {
+    width: 90%;
+
+    padding:
+      45px 0
+      55px;
+
+    gap: 35px;
+  }
+
+  .explore-hero h1 {
+    font-size: 52px;
+
+    letter-spacing: -2px;
+  }
+
+  .explore-hero-content > p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .explore-search {
+    height: 54px;
+  }
+
+  .explore-hero-image {
+    height: 360px;
+  }
+
+  .destinations-section {
+    width: 90%;
+
+    padding:
+      65px 0
+      75px;
+  }
+
+  .destinations-heading {
+    margin-bottom: 35px;
+  }
+
+  .destinations-heading h2 {
+    font-size: 43px;
+  }
+
+  .destinations-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .destination-image {
+    height: 250px;
+  }
+
+  .destination-content {
+    padding: 24px;
+  }
+
+  .destination-content h3 {
+    font-size: 28px;
+  }
+
+  .explore-quote {
+    padding: 80px 20px;
+  }
+
+  .explore-quote blockquote {
+    font-size: 34px;
+  }
+
+  .explore-cta {
+    width: 90%;
+
+    padding:
+      80px 0
+      100px;
+  }
+
+  .explore-cta h2 {
+    font-size: 43px;
+  }
+
+
+  /* DETAILS */
+
+  .destination-back-button {
+    top: 15px;
+    left: 15px;
+
+    padding: 10px 14px;
+  }
+
+  .destination-details-header {
+    width: 92%;
+
+    padding:
+      80px 0
+      45px;
+
+    gap: 35px;
+  }
+
+  .destination-details-header-image {
+    height: 430px;
+
+    border-radius: 16px;
+  }
+
+  .destination-image-overlay {
+    padding:
+      60px 25px
+      25px;
+  }
+
+  .destination-image-overlay h1 {
+    font-size: 52px;
+  }
+
+  .destination-details-intro h2 {
+    font-size: 40px;
+  }
+
+  .destination-actions {
+    flex-direction: column;
+  }
+
+  .destination-action {
+    width: 100%;
+  }
+
+  .journey-updates-section {
+    width: 92%;
+
+    padding-top: 25px;
+  }
+
+  .journey-section-heading {
+    margin-bottom: 35px;
+  }
+
+  .journey-section-heading h2 {
+    font-size: 40px;
+  }
+
+  .journey-timeline::before {
+    left: 20px;
+  }
+
+  .journey-update-card {
+    grid-template-columns: 40px 1fr;
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+  }
+
+  .journey-number {
+    width: 40px;
+    height: 40px;
+  }
+
+  .journey-number span {
+    font-size: 9px;
+  }
+
+  .journey-update-content {
+    border-radius: 15px;
+  }
+
+  .journey-update-top {
+    flex-direction: column;
+
+    gap: 15px;
+
+    padding: 22px 20px;
+  }
+
+  .journey-update-top h3 {
+    font-size: 24px;
+  }
+
+  .journey-update-date {
+    align-items: flex-start;
+  }
+
+  .journey-update-image {
+    height: 300px;
+  }
+
+  .journey-update-story {
+    padding: 23px 20px;
+  }
+
+  .journey-comments {
+    padding: 22px 20px;
+  }
+
+  .comments-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .comment-input-area {
+    flex-direction: column;
+  }
+
+  .comment-input-area button {
+    align-self: stretch;
+  }
+
+  .no-journey-update {
+    padding:
+      55px 20px;
+  }
+
+  .no-journey-update h3 {
+    font-size: 25px;
+  }
+
+  .comment-meta {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 3px;
+  }
+}
