@@ -8,4 +8,6 @@ FROM eclipse-temurin:21-jre
 WORKDIR /app
 COPY --from=build /app/target/backend-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
+# Activate the Aiven profile by default; override with SPRING_PROFILES_ACTIVE env var on Render if needed
+ENV SPRING_PROFILES_ACTIVE=aiven
 ENTRYPOINT ["java", "-jar", "app.jar"]
